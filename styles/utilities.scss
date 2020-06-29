@@ -1,0 +1,82 @@
+// ****** UTILITIES.SCSS *********
+// @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+$dark1: #090909;
+$dark2: #252528;
+$dark3: #424246;
+$dark4: #5f5f64;
+$light1: #99999f;
+$light2: #b8b8bc;
+$light3: #d6d6d8;
+$light4: #f4f4f5;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  color: $dark1;
+}
+
+.pageWrapper {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  min-height: 100vh;
+
+  @media (max-width: 576px) {
+    display: block;
+  }
+
+  .notesListSection {
+    background: $light4;
+    border-right: 1px solid rgba($light2, 1);
+  }
+
+  .notesDetailSection {
+    padding: 40px;
+
+    @media (max-width: 576px) {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      padding: 15px;
+      background: white;
+    }
+  }
+}
+
+.mainHeading {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.headingWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid rgba($light2, 1);
+}
+
+.backButton {
+  display: none;
+
+  @media (max-width: 576px) {
+    display: block;
+  }
+}

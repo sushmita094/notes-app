@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Notes App</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body>
+    <div class="pageWrapper">
+      <section class="notesListSection" id="notesListSection">
+        <div class="headingWrapper">
+          <h1 class="mainHeading">QuikNotes</h1>
+          <button onclick="addNote()">
+            <img src="assets/plus.svg" alt="add note" />
+          </button>
+        </div>
+
+        <div class="notesCard" onclick="openTab('tabContent1')">
+          <h4 class="title">London</h4>
+          <p class="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, acc
+          </p>
+        </div>
+
+        <div class="notesCard" onclick="openTab('tabContent2')">
+          <h4 class="title">Paris</h4>
+          <p class="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, acc
+          </p>
+        </div>
+
+        <div class="notesCard" onclick="openTab('tabContent3')">
+          <h4 class="title">Delhi</h4>
+          <p class="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, acc
+          </p>
+        </div>
+      </section>
+
+      <section class="notesDetailSection" id="notesDetailSection">
+        <button class="backButton" onclick="closeMobileScreen()">Back</button>
+        <div class="noteBody" id="tabContent1">
+          <h4 class="title">London</h4>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              numquam blanditiis, eius error rem laudantium saepe optio
+              praesentium voluptas est.
+            </p>
+          </div>
+        </div>
+
+        <div class="noteBody" id="tabContent2">
+          <h4 class="title">Paris</h4>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              pariatur ab, voluptates non delectus dolorum.
+            </p>
+          </div>
+        </div>
+
+        <div class="noteBody" id="tabContent3">
+          <h4 class="title">Delhi</h4>
+          <div class="content">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+              sed?
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="http://localhost:4000/livereload.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

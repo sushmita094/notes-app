@@ -1,0 +1,43 @@
+// ****** NOTEBODY.SCSS *********
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.noteBody {
+  background: white;
+  height: 100%;
+  overflow: scroll;
+  border-radius: 5px;
+  padding: 20px;
+  animation: fadeEffect 0.5s ease-in;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &:not(.show) {
+    display: none;
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    color: $dark3;
+    margin-top: 15px;
+    line-height: 1.4;
+  }
+}
